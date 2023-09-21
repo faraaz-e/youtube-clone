@@ -11,13 +11,13 @@ const ButtonList = () => {
     "TV Series",
     "Drama",
     "Action movies",
-    "Trending Trailers"
+    "Trending Trailers",
   ];
 
   return (
     <div className="flex">
-      {list.map((name) => (
-        <Button name={name} />
+      {list.map((name, index) => (
+        <Button key={index} name={name} />
       ))}
     </div>
   );
