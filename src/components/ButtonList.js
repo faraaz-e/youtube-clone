@@ -1,7 +1,26 @@
-const ButtonList = () => {
-  return (
-    <div>ButtonList</div>
-  )
-}
+import Button from "./Button";
 
-export default ButtonList
+const ButtonList = () => {
+  const list = [
+    "All",
+    "Live",
+    "Music",
+    "Gaming",
+    "News",
+    "Comedy",
+    "TV Series",
+    "Drama",
+    "Action movies",
+    "Trending Trailers"
+  ];
+
+  return (
+    <div className="flex">
+      {list.map((name) => (
+        <Button name={name} />
+      ))}
+    </div>
+  );
+};
+
+export default ButtonList;
