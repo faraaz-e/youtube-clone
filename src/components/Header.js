@@ -1,8 +1,17 @@
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../utils/appSlice";
+
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const toggleMenuHandler = () => {
+    dispatch(toggleMenu());
+  };
+
   return (
     <div className="grid grid-flow-col">
       <div className="flex col-span-2 py-2 px-5 items-center">
-        <button className="hidden md:block">
+        <button className="hidden md:block" onClick={() => toggleMenuHandler()}>
           <span className="material-symbols-outlined text-white align-middle">
             menu
           </span>
