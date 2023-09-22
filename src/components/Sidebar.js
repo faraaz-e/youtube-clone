@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
@@ -9,10 +10,12 @@ const Sidebar = () => {
   return (
     <div className="col-span-2 px-4 py-3 text-white hidden md:block">
       <div className="space-y-1">
-        <div className="flex p-2 hover:bg-zinc-800 hover:rounded-lg">
-          <span className="material-symbols-outlined">home</span>
-          <label className="px-5">Home</label>
-        </div>
+        <Link to="/">
+          <div className="flex p-2 hover:bg-zinc-800 hover:rounded-lg">
+            <span className="material-symbols-outlined">home</span>
+            <label className="px-5">Home</label>
+          </div>
+        </Link>
         <div className="flex p-2 hover:bg-zinc-800 hover:rounded-lg">
           <span className="material-symbols-outlined">slow_motion_video</span>
           <label className="px-5">Shorts</label>
