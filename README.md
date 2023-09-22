@@ -12,6 +12,7 @@ Disclaimer: This App is made for educational purpose only.
 - Configure the _tailwind.config.js_ file
 - `npm i @reduxjs/toolkit`
 - `npm i react-redux`
+- `npm i react-router-dom`
 
 ### Project Structure
 
