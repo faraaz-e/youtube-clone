@@ -1,7 +1,28 @@
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
+import { useEffect, useState } from "react";
+import { YOUTUBE_SEARCH_API } from "../utils/constants";
 
 const Header = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+  useEffect(() => {
+    // Debouncing
+    const timer = setTimeout(() => getSearchSuggestions(), 200);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [searchQuery]);
+
+  const getSearchSuggestions = async () => {
+    const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+    const jsonData = await data.json();
+    setSuggestions(jsonData[1]);
+  };
+
   const dispatch = useDispatch();
 
   const toggleMenuHandler = () => {
@@ -31,6 +52,10 @@ const Header = () => {
           type="text"
           className="py-1 px-4 border border-solid border-zinc-800 bg-black text-white focus:border-blue-800 rounded-l-full w-1/2"
           placeholder="Search"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onFocus={() => setShowSuggestions(true)}
+          onBlur={() => setShowSuggestions(false)}
         />
 
         <button className="py-1 px-4 border border-solid border-zinc-800 bg-zinc-800 hover:bg-zinc-700 rounded-r-full">
@@ -38,6 +63,24 @@ const Header = () => {
             search
           </span>
         </button>
+
+        {showSuggestions && (
+          <div className="-ml-28 bg-zinc-800 text-white fixed top-14 rounded-lg w-[30%]">
+            <ul>
+              {suggestions.map((suggestion) => (
+                <li
+                  key={suggestion}
+                  className="hover:bg-zinc-700 w-full px-5 py-1"
+                >
+                  <span className="material-symbols-outlined text-white align-middle pr-2">
+                    search
+                  </span>
+                  {suggestion}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <button className="mx-3 p-2 bg-zinc-800 hover:bg-zinc-700 rounded-full text-white hidden md:block">
           <span className="material-symbols-outlined text-white align-middle">
