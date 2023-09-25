@@ -31,6 +31,8 @@ Disclaimer: This App is made for educational purpose only.
 
 ![image](https://github.com/faraaz-e/youtube-clone/assets/61732459/eeeeb1ee-667c-400f-ae23-fa0a6cc6093b)
 
+![image](https://github.com/faraaz-e/youtube-clone/assets/61732459/9d58b541-c05a-404b-9752-4c373d3e546d)
+
 ![image](https://github.com/faraaz-e/youtube-clone/assets/61732459/d6855bd1-04e0-4ba4-acef-73a578f41ad4)
 
 
