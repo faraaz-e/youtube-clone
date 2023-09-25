@@ -2,11 +2,9 @@
 
 Youtube clone app using React
 
-Disclaimer: This App is made for educational purpose only.
-
 [Click here for App Screenshots](https://github.com/faraaz-e/youtube-clone/#screenshots)
 
-
+Disclaimer: This App is made for educational purpose only.
 
 ### Project Installation & dependencies
 
