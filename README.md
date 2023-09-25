@@ -24,3 +24,11 @@ Disclaimer: This App is made for educational purpose only.
     - ButtonsList
     - VideoContainer
         - VideoCard
+
+### Screenshots
+
+![image](https://github.com/faraaz-e/youtube-clone/assets/61732459/eeeeb1ee-667c-400f-ae23-fa0a6cc6093b)
+
+![image](https://github.com/faraaz-e/youtube-clone/assets/61732459/d6855bd1-04e0-4ba4-acef-73a578f41ad4)
+
+
