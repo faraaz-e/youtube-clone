@@ -39,6 +39,6 @@ Disclaimer: This App is made for educational purpose only.
 
 Two types of getting Live Data
 
-1. **Web Sockets** : Connection between client(UI) and server establishes to get realtime data (no time intervals to fetch data)
-2. **Long/API Polling** : Client fetches data from server at certain time intervals
+1. **Web Sockets** : Connection between client(UI) and server establishes to get realtime data (no time intervals to fetch data). Eg. Whatsapp, Trading apps.
+2. **Long/API Polling** : Client fetches data from server at certain time intervals. Eg. Gmail, Cricbuzz
 
