@@ -35,4 +35,10 @@ Disclaimer: This App is made for educational purpose only.
 
 ![image](https://github.com/faraaz-e/youtube-clone/assets/61732459/d6855bd1-04e0-4ba4-acef-73a578f41ad4)
 
+#### Notes
+
+Two types of getting Live Data
+
+1. **Web Sockets** : Connection between client(UI) and server establishes to get realtime data (no time intervals to fetch data)
+2. **Long/API Polling** : Client fetches data from server at certain time intervals
 
