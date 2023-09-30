@@ -8,7 +8,7 @@ Disclaimer: This App is made for educational purpose only.
 
 ### Project Installation
 
-`npm install` ./
+`npm install`  
 `npm start`
 
 ### Project Dependencies
