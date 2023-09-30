@@ -6,7 +6,12 @@ Youtube clone app using React
 
 Disclaimer: This App is made for educational purpose only.
 
-### Project Installation & dependencies
+### Project Installation
+
+`npm install`
+`npm start`
+
+### Project Dependencies
 
 - `npx create-react-app app-name`
 - `npm i -D tailwindcss`
